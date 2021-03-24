@@ -1,0 +1,16 @@
+<div class="col">
+    <div class="card-group  animated fadeIn fast">
+        <div class="card h-100">
+            <img [src]="heroes.img" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ heroes.nombre }}</h5>
+                <p class="card-text">{{ heroes.bio }}</p>
+            </div>
+            <div class="card-footer">
+                <!-- <small class="text-muted">{{ he.casa }}</small> -->
+                <button type="button" (click)="verHeroe()" class="btn btn-outline-info">Ver mas...</button>
+                <!-- <a [routerLink]="['/heroe', i]" class="btn btn-outline-info">Ver mas...</a> -->
+            </div>
+        </div>
+    </div>
+</div>

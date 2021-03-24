@@ -1,0 +1,10 @@
+<div class="container-xl">
+    <h1>Buscando: <small>{{ termino }}</small></h1>
+    <div class="alert alert-info" role="alert" *ngIf="heroe.length == 0">
+        No exiten resultado: {{termino}}
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- *ngFor="let he of heroe; let i = index" -->
+        <app-tarjeta-heroe [heroes]="he" [index]="he.idx" *ngFor="let he of heroe; let i = index"></app-tarjeta-heroe>
+    </div>
+</div>

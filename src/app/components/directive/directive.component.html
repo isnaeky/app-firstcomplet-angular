@@ -1,0 +1,50 @@
+<div class="container" style="margin-top: 50px; margin-bottom: 50px;">
+    <div>
+        <p [ngStyle]="{'font-size.px': aun}">Hola Mundo</p>
+        <button type="button" class="btn btn-primary" (click)="aun=aun+5">+</button>
+        <button type="button" class="btn btn-primary" (click)="aun=aun-5">-</button>
+    </div>
+    <div style="margin-top: 50px;">
+        <div class="alert" role="alert" [ngClass]="cls">
+            A simple danger alert—check it out!
+        </div>
+        <button type="button" (click)="cls='alert-primary'" class="btn btn-primary">Primary</button>
+        <button type="button" (click)="cls='alert-info'" class="btn btn-info">Info</button>
+    </div>
+    <div style="margin-top: 50px;">
+        <h3 [ngClass]=" { 'text-danger': propied.danger,'text-info': !propied.danger } ">Hola Mundo</h3>
+
+        <button type="button" class="btn btn-primary" (click)="propied.danger=!propied.danger">Cambiar</button>
+    </div>
+
+    <div style="margin-top: 50px;">
+        <h3>Proceso Asincrono</h3>
+        <button type="button" class="btn btn-primary" (click)="procesoAs()" [disabled]="ban">
+        <i class="fa" [ngClass]="cl"></i>
+        {{txt}}
+    </button>
+    </div>
+
+    <div style="margin-top: 50px;">
+
+        <button type="button" class="btn btn-primary" (click)="vari=vari+1">Cambiar</button>
+        <div [ngSwitch]="vari">
+            <div *ngSwitchCase="0" class="alert alert-success" role="alert">
+                A simple success alert—check it out!
+            </div>
+            <div *ngSwitchCase="1" class="alert alert-danger" role="alert">
+                A simple danger alert—check it out!
+            </div>
+            <div *ngSwitchCase="2" class="alert alert-warning" role="alert">
+                A simple warning alert—check it out!
+            </div>
+            <div *ngSwitchCase="3" class="alert alert-info" role="alert">
+                A simple info alert—check it out!
+            </div>
+            <div *ngSwitchDefault class="alert alert-primary" role="alert">
+                A simple primary alert—check it out!
+            </div>
+        </div>
+    </div>
+
+</div>
